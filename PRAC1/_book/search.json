@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PRAC1",
+    "section": "",
+    "text": "Question 1\nThe rows in the air quality data set that do not have values are:\n\n#\\ eval:false\ndata &lt;- airquality\nindex &lt;- c(which(is.na(data$Ozone)),which(is.na(data$Solar.R)),which(is.na(data$Wind)),which(is.na(data$Temp)),which(is.na(data$Month)),which(is.na(data$Day)))\nindex &lt;- sort(unique(index))\nindex\n\n [1]   5   6  10  11  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52\n[20]  53  54  55  56  57  58  59  60  61  65  72  75  83  84  96  97  98 102 103\n[39] 107 115 119 150\n\n\nQuestion 2\nThe mean and standard deviation respectively for temperature in the air quality data set are:\n\n#\\ eval:FALSE\nmean(data$Temp)\n\n[1] 77.88235\n\nsd(data$Temp)\n\n[1] 9.46527\n\n\nThe maximum and minimum respectively for temperature in the air quality data set are:\n\n#\\eval:FALSE\nmax(data$Temp)\n\n[1] 97\n\nmin(data$Temp)\n\n[1] 56\n\n\nThe mean and standard deviation respectively for ozone in the air quality data set are:\n\n#\\ eval:FALSE\nmean(data$Ozone,na.rm = TRUE)\n\n[1] 42.12931\n\nsd(data$Ozone, na.rm = TRUE)\n\n[1] 32.98788\n\n\nThe maximum and minimum respectively for ozone in the air quality data set are:\n\nmax(data$Ozone, na.rm = TRUE)\n\n[1] 168\n\nmin(data$Ozone, na.rm = TRUE)\n\n[1] 1\n\n\nQuestion 3\n\ndata_car &lt;- cars\nY &lt;- data_car$dist\nX &lt;- matrix(1,nrow=50,ncol=2)\nX &lt;- cbind(1,data_car$speed)\nXT &lt;- t(X)\nXTX &lt;- XT %*% X\ninverse &lt;- solve(XTX)\nsolution &lt;- inverse %*% XT %*% Y\nsolution\n\n           [,1]\n[1,] -17.579095\n[2,]   3.932409\n\n\n\nlm(data_car$dist~data_car$speed)\n\n\nCall:\nlm(formula = data_car$dist ~ data_car$speed)\n\nCoefficients:\n   (Intercept)  data_car$speed  \n       -17.579           3.932",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>index.html</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  }
+]
