@@ -1,0 +1,40 @@
+---
+title: "PRAC 3"
+---
+
+**Question 1**
+
+```{r}
+library(tidyverse)
+library(nycflights13)
+data(flights, package = "nycflights13")
+data1 <- as_tibble(flights)
+data1
+```
+
+**Question 2**
+
+```{r}
+flight1 <- flights |> 
+  filter(month == 1)
+carrier_vec <- flight1 |> 
+  distinct(carrier)
+carrier_dist_vec_mean <- carrier_vec |> 
+  length()|>
+  vector(mode = "numeric")
+carrier_dist_vec_sd <- carrier_vec |> 
+  length() |> 
+  vector(mode = "numeric")
+carrier_dist_vec_mean <- flight1 |> 
+  group_by(carrier) |> 
+  summarise(mean_dist = mean(distance))
+carrier_dist_vec_sd <- flight1 |> 
+  group_by(carrier) |> 
+  summarise(sd_dist = sd(distance))
+dist_table <- tibble(carrier_vec,carrier_dist_vec_mean[,2],carrier_dist_vec_sd[,2])
+dist_table
+```
+
+**Question 3**
+
+The sd will be NA when there is only 1 observation while it will be zero if multiple observation of the same value.

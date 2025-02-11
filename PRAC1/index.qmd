@@ -1,9 +1,10 @@
+**PRACTICAL 1**
+
 **Question 1**
 
 The rows in the air quality data set that do not have values are:
 
 ```{r}
-#\ eval:false
 data <- airquality
 index <- c(which(is.na(data$Ozone)),which(is.na(data$Solar.R)),which(is.na(data$Wind)),which(is.na(data$Temp)),which(is.na(data$Month)),which(is.na(data$Day)))
 index <- sort(unique(index))
@@ -15,7 +16,6 @@ index
 The mean and standard deviation respectively for temperature in the air quality data set are:
 
 ```{r}
-#\ eval:FALSE
 mean(data$Temp)
 sd(data$Temp)
 ```
@@ -23,7 +23,6 @@ sd(data$Temp)
 The maximum and minimum respectively for temperature in the air quality data set are:
 
 ```{r}
-#\eval:FALSE
 max(data$Temp)
 min(data$Temp)
 ```
@@ -31,7 +30,6 @@ min(data$Temp)
 The mean and standard deviation respectively for ozone in the air quality data set are:
 
 ```{r}
-#\ eval:FALSE
 mean(data$Ozone,na.rm = TRUE)
 sd(data$Ozone, na.rm = TRUE)
 ```

@@ -2,14 +2,13 @@ project:
   type: book
 
 book:
-  title: "PRAC1"
+  title: "PRACTICALS"
   author: "Michael Bryant"
   date: "2/7/2025"
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+    - PRAC 2.qmd
+    - PRAC 3.qmd
 
 bibliography: references.bib
 

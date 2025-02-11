@@ -2,41 +2,31 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "PRAC1",
+    "title": "PRACTICALS",
     "section": "",
-    "text": "Question 1\nThe rows in the air quality data set that do not have values are:\n\n#\\ eval:false\ndata &lt;- airquality\nindex &lt;- c(which(is.na(data$Ozone)),which(is.na(data$Solar.R)),which(is.na(data$Wind)),which(is.na(data$Temp)),which(is.na(data$Month)),which(is.na(data$Day)))\nindex &lt;- sort(unique(index))\nindex\n\n [1]   5   6  10  11  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52\n[20]  53  54  55  56  57  58  59  60  61  65  72  75  83  84  96  97  98 102 103\n[39] 107 115 119 150\n\n\nQuestion 2\nThe mean and standard deviation respectively for temperature in the air quality data set are:\n\n#\\ eval:FALSE\nmean(data$Temp)\n\n[1] 77.88235\n\nsd(data$Temp)\n\n[1] 9.46527\n\n\nThe maximum and minimum respectively for temperature in the air quality data set are:\n\n#\\eval:FALSE\nmax(data$Temp)\n\n[1] 97\n\nmin(data$Temp)\n\n[1] 56\n\n\nThe mean and standard deviation respectively for ozone in the air quality data set are:\n\n#\\ eval:FALSE\nmean(data$Ozone,na.rm = TRUE)\n\n[1] 42.12931\n\nsd(data$Ozone, na.rm = TRUE)\n\n[1] 32.98788\n\n\nThe maximum and minimum respectively for ozone in the air quality data set are:\n\nmax(data$Ozone, na.rm = TRUE)\n\n[1] 168\n\nmin(data$Ozone, na.rm = TRUE)\n\n[1] 1\n\n\nQuestion 3\n\ndata_car &lt;- cars\nY &lt;- data_car$dist\nX &lt;- matrix(1,nrow=50,ncol=2)\nX &lt;- cbind(1,data_car$speed)\nXT &lt;- t(X)\nXTX &lt;- XT %*% X\ninverse &lt;- solve(XTX)\nsolution &lt;- inverse %*% XT %*% Y\nsolution\n\n           [,1]\n[1,] -17.579095\n[2,]   3.932409\n\n\n\nlm(data_car$dist~data_car$speed)\n\n\nCall:\nlm(formula = data_car$dist ~ data_car$speed)\n\nCoefficients:\n   (Intercept)  data_car$speed  \n       -17.579           3.932",
+    "text": "PRACTICAL 1\nQuestion 1\nThe rows in the air quality data set that do not have values are:\n\ndata &lt;- airquality\nindex &lt;- c(which(is.na(data$Ozone)),which(is.na(data$Solar.R)),which(is.na(data$Wind)),which(is.na(data$Temp)),which(is.na(data$Month)),which(is.na(data$Day)))\nindex &lt;- sort(unique(index))\nindex\n\n [1]   5   6  10  11  25  26  27  32  33  34  35  36  37  39  42  43  45  46  52\n[20]  53  54  55  56  57  58  59  60  61  65  72  75  83  84  96  97  98 102 103\n[39] 107 115 119 150\n\n\nQuestion 2\nThe mean and standard deviation respectively for temperature in the air quality data set are:\n\nmean(data$Temp)\n\n[1] 77.88235\n\nsd(data$Temp)\n\n[1] 9.46527\n\n\nThe maximum and minimum respectively for temperature in the air quality data set are:\n\nmax(data$Temp)\n\n[1] 97\n\nmin(data$Temp)\n\n[1] 56\n\n\nThe mean and standard deviation respectively for ozone in the air quality data set are:\n\nmean(data$Ozone,na.rm = TRUE)\n\n[1] 42.12931\n\nsd(data$Ozone, na.rm = TRUE)\n\n[1] 32.98788\n\n\nThe maximum and minimum respectively for ozone in the air quality data set are:\n\nmax(data$Ozone, na.rm = TRUE)\n\n[1] 168\n\nmin(data$Ozone, na.rm = TRUE)\n\n[1] 1\n\n\nQuestion 3\n\ndata_car &lt;- cars\nY &lt;- data_car$dist\nX &lt;- matrix(1,nrow=50,ncol=2)\nX &lt;- cbind(1,data_car$speed)\nXT &lt;- t(X)\nXTX &lt;- XT %*% X\ninverse &lt;- solve(XTX)\nsolution &lt;- inverse %*% XT %*% Y\nsolution\n\n           [,1]\n[1,] -17.579095\n[2,]   3.932409\n\n\n\nlm(data_car$dist~data_car$speed)\n\n\nCall:\nlm(formula = data_car$dist ~ data_car$speed)\n\nCoefficients:\n   (Intercept)  data_car$speed  \n       -17.579           3.932",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>index.html</span>"
     ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "2  Introduction",
+    "objectID": "PRAC 3.html",
+    "href": "PRAC 3.html",
+    "title": "3  PRAC 3",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Question 1\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(nycflights13)\ndata(flights, package = \"nycflights13\")\ndata1 &lt;- as_tibble(flights)\ndata1\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time\n   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;\n 1  2013     1     1      517            515         2      830            819\n 2  2013     1     1      533            529         4      850            830\n 3  2013     1     1      542            540         2      923            850\n 4  2013     1     1      544            545        -1     1004           1022\n 5  2013     1     1      554            600        -6      812            837\n 6  2013     1     1      554            558        -4      740            728\n 7  2013     1     1      555            600        -5      913            854\n 8  2013     1     1      557            600        -3      709            723\n 9  2013     1     1      557            600        -3      838            846\n10  2013     1     1      558            600        -2      753            745\n# ℹ 336,766 more rows\n# ℹ 11 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,\n#   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;, distance &lt;dbl&gt;,\n#   hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;\n\n\nQuestion 2\n\nflight1 &lt;- flights |&gt; \n  filter(month == 1)\ncarrier_vec &lt;- flight1 |&gt; \n  distinct(carrier)\ncarrier_dist_vec_mean &lt;- carrier_vec |&gt; \n  length()|&gt;\n  vector(mode = \"numeric\")\ncarrier_dist_vec_sd &lt;- carrier_vec |&gt; \n  length() |&gt; \n  vector(mode = \"numeric\")\ncarrier_dist_vec_mean &lt;- flight1 |&gt; \n  group_by(carrier) |&gt; \n  summarise(mean_dist = mean(distance))\ncarrier_dist_vec_sd &lt;- flight1 |&gt; \n  group_by(carrier) |&gt; \n  summarise(sd_dist = sd(distance))\ndist_table &lt;- tibble(carrier_vec,carrier_dist_vec_mean[,2],carrier_dist_vec_sd[,2])\ndist_table\n\n# A tibble: 16 × 3\n   carrier mean_dist sd_dist\n   &lt;chr&gt;       &lt;dbl&gt;   &lt;dbl&gt;\n 1 UA           476.   334. \n 2 AA          1350.   626. \n 3 B6          2402      0  \n 4 DL          1062.   681. \n 5 EV          1220.   644. \n 6 MQ           522.   294. \n 7 US          1620      0  \n 8 WN           691.   142. \n 9 VX          4983      0  \n10 FL           566.   223. \n11 AS           733     NA  \n12 9E          1462.   778. \n13 F9           536.   553. \n14 HA          2495.    98.2\n15 YV           942.   496. \n16 OO           229      0  \n\n\nQuestion 3\nThe sd will be NA when there is only 1 observation while it will be zero if multiple observation of the same value.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>PRAC 3</span>"
     ]
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "3  Summary",
+    "objectID": "PRAC 2.html",
+    "href": "PRAC 2.html",
+    "title": "3  Prac 2",
     "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2",
+    "text": "Question 1\n\nset.seed(1)\nx &lt;- c(1:100)\ny &lt;- sin(x/10) + rnorm(1,0,0.2)\n\nQuestion 2\n\ncustomLowess &lt;- function(x,y,f){\n  y_final &lt;- rep(0,100)\n  n &lt;- length(x)\n  k &lt;- f*n\n  weights &lt;- matrix(0, nrow = k+1 ,ncol = n)\n  \n  for (i in 1:n){\n    vector_distance = vector()\n    w &lt;- matrix(0,nrow = k+1,ncol = k+1)\n    for (j in 1:n){\n      vector_distance[j] &lt;- (abs(x[j]-x[i]))\n    }\n    vector_indicies &lt;- order(vector_distance)[1:(k+1)]\n    vector_distance &lt;- sort(vector_distance)\n    neighbours &lt;- vector_distance[1:(k+1)]\n    for (l in 1:k+1){\n      weights[l,i] &lt;- (1-(neighbours[l]/max(neighbours)^3)^3)\n    }\n    w &lt;- diag(weights[,i],nrow = k+1,ncol = k+1)\n    x_neighbours &lt;- as.matrix(x[vector_indicies])\n    y_neighbours &lt;- as.matrix(y[vector_indicies])\n    xt_neighbours &lt;- t(x_neighbours)\n    b &lt;- solve((xt_neighbours %*% w %*% x_neighbours))\n    b &lt;- b %*% xt_neighbours %*% w %*% y_neighbours\n    y_final[i] &lt;- b*x[i]\n  }\n  return(y_final)\n}\n\nQuestion 3\nBuilt in Lowess smothing function with f = 0.05\n\nbuiltin &lt;- lowess(x,y,0.05,0)\nplot(builtin)\n\n\n\n\n\n\n\n\nCustom Lowess function with f = 0.05\n\ny_final &lt;- customLowess(x,y,0.05)\nplot(y_final)",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
-    ]
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
-    "crumbs": [
-      "References"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Prac 2</span>"
     ]
   }
 ]
