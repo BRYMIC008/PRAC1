@@ -1,0 +1,64 @@
+---
+title: "PRAC 1"
+---
+
+**PRACTICAL 1**
+
+**Question 1**
+
+The rows in the air quality data set that do not have values are:
+
+```{r}
+data <- airquality 
+index <- c(which(is.na(data$Ozone)),which(is.na(data$Solar.R)),which(is.na(data$Wind)),which(is.na(data$Temp)),which(is.na(data$Month)),which(is.na(data$Day))) 
+index <- sort(unique(index)) 
+index
+```
+
+**Question 2**
+
+The mean and standard deviation respectively for temperature in the air quality data set are:
+
+```{r}
+mean(data$Temp)
+sd(data$Temp)
+```
+
+The maximum and minimum respectively for temperature in the air quality data set are:
+
+```{r}
+max(data$Temp) 
+min(data$Temp)
+```
+
+The mean and standard deviation respectively for ozone in the air quality data set are:
+
+```{r}
+mean(data$Ozone,na.rm = TRUE) 
+sd(data$Ozone, na.rm = TRUE)
+```
+
+The maximum and minimum respectively for ozone in the air quality data set are:
+
+```{r}
+max(data$Ozone, na.rm = TRUE) 
+min(data$Ozone, na.rm = TRUE)
+```
+
+**Question 3**
+
+```{r}
+data_car <- cars 
+Y <- data_car$dist 
+X <- matrix(1,nrow=50,ncol=2)
+X <- cbind(1,data_car$speed) 
+XT <- t(X) 
+XTX <- XT %*% X 
+inverse <- solve(XTX)
+solution <- inverse %*% XT %*% Y 
+solution
+```
+
+```{r}
+lm(data_car$dist~data_car$speed)
+```
